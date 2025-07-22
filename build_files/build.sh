@@ -11,6 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y tmux btop fastfetch fuzzel foot grim thunar \
+                swaybg \
                 wlr-randr adw-gtk3-theme qt6ct #themes/libs
 
 dnf5 install -y river waybar sddm
