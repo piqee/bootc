@@ -14,8 +14,8 @@ dnf5 install -y tmux btop fastfetch
 
 # Use a COPR Example:
 #
-dnf5 -y copr enable ublue-os/staging
-dnf5 -y install package
+# dnf5 -y copr enable ublue-os/staging
+# dnf5 -y install package
 
 dnf5 -y copr enable atim/starship
 dnf5 -y install starship
