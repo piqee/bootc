@@ -13,7 +13,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh && \
     chmod +x /ctx/sddm.sh && \
-    chmod +x /ctx/river.sh
+    chmod +x /ctx/river.sh && \
     /ctx/sddm.sh && \
     /ctx/river.sh && \
     ostree container commit
