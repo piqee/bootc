@@ -14,10 +14,10 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build.sh && \
     ostree container commit
 
-RUN from=ctx,source=/,target=/ctx \
+RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/sddm.sh 
 
-RUN from=ctx,source=/,target=/ctx \
+RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/river.sh
 
 RUN bootc container lint
