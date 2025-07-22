@@ -5,6 +5,8 @@ COPY build_files /
 # Base Image
 FROM ghcr.io/ublue-os/base-nvidia
 
+USER root
+
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
@@ -12,10 +14,10 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build.sh && \
     ostree container commit
 
-RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
+RUN from=ctx,source=/,target=/ctx \
     /ctx/sddm.sh 
 
-RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
+RUN from=ctx,source=/,target=/ctx \
     /ctx/river.sh
 
 RUN bootc container lint
