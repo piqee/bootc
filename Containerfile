@@ -12,15 +12,8 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh && \
-    ostree container commit
-
-RUN chmod +x /ctx/sddm.sh && \
+    chmod +x /ctx/sddm.sh && \
     chmod +x /ctx/river.sh
-
-RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
-    --mount=type=cache,dst=/var/cache \
-    --mount=type=cache,dst=/var/log \
-    --mount=type=tmpfs,dst=/tmp \
     /ctx/sddm.sh && \
     /ctx/river.sh && \
     ostree container commit
