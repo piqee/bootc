@@ -21,7 +21,7 @@ dnf5 -y copr enable atim/starship
 dnf5 -y install starship
 
 # Disable COPRs so they don't end up enabled on the final image:
-dnf5 -y copr disable ublue-os/staging
+# dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr disable atim/starship
 
 #### Example for enabling a System Unit File
