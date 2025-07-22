@@ -12,7 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux btop fastfetch 
 
-dnf5 install -y river waybar
+dnf5 install -y river waybar sddm
 
 # Use a COPR Example:
 #
