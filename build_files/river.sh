@@ -7,17 +7,16 @@ echo "=== Configuring RiverWM ==="
 mkdir -p /usr/share/wayland-sessions/
 
 # Создание .desktop файла для RiverWM
-cat > /usr/share/wayland-sessions/river.desktop << 'EOF'
-[Desktop Entry]
-Name=River
-Comment=Dynamic tiling Wayland compositor
-Exec=river
-Type=Application
-DesktopNames=River
-EOF
+# cat > /usr/share/wayland-sessions/river.desktop << 'EOF'
+# [Desktop Entry]
+# Name=River
+# Comment=Dynamic tiling Wayland compositor
+# Exec=river
+# Type=Application
+# DesktopNames=River
+# EOF
 
 # Создание базовой конфигурации для пользователя
-#!/bin/bash
 
 mkdir -p /etc/skel/.config/river/
 
