@@ -237,4 +237,7 @@ riverctl spawn "gnome-keyring-daemon --start --components=secrets"
 #dbus-update-activation-environment --systemd --all &
 #gnome-keyring-daemon --start --components=secrets &
 EOF
-chmod +x /etc/skel/.config/river/init
+
+cat > /etc/skel/.config/test << 'EOF'
+TEEEEEST
+EOF
