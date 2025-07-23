@@ -1,18 +1,36 @@
 #!/bin/bash
-set -ouex pipefail
+set -e
 
- echo "Настройка файла конфигурации SDDM (/etc/sddm.conf)..."
+echo "=== Configuring SDDM ==="
 
-SDDM_CONF="/etc/sddm.conf"
+# Создание директории для конфигурации SDDM
+mkdir -p /etc/sddm.conf.d/
 
-# Создаем файл конфигурации, если он не существует
-if [ ! -f "$SDDM_CONF" ]; then
-    echo "[Theme]" | sudo tee "$SDDM_CONF" > /dev/null
-    echo "Current=breeze" | sudo tee -a "$SDDM_CONF" > /dev/null
-    echo "" | sudo tee -a "$SDDM_CONF" > /dev/null  
-    echo "[Autologin]" | sudo tee -a "$SDDM_CONF" > /dev/null
-    echo "[Wayland]" | sudo tee -a "$SDDM_CONF" > /dev/null
-    echo "[X11]" | sudo tee -a "$SDDM_CONF" > /dev/null
-    echo "[General]" | sudo tee -a "$SDDM_CONF" > /dev/null
-    echo "Создан базовый файл $SDDM_CONF."
-fi
+# Создание файла темы
+cat > /etc/sddm.conf.d/10-theme.conf << 'EOF'
+[Theme]
+Current=maldives
+CursorTheme=breeze
+Font=Noto Sans Mono
+EOF
+
+# Создание основной конфигурации
+cat > /etc/sddm.conf.d/20-general.conf << 'EOF'
+[General]
+GreeterEnvironment=QTWEBENGINE_CHROMIUM_FLAGS=--disable-gpu
+Numlock=on
+
+[Wayland]
+CompositorCommand=river
+
+[X11]
+ServerArguments=-dpi 96
+EOF
+
+# Установка правильных прав доступа
+chmod 644 /etc/sddm.conf.d/*.conf
+
+# Включение SDDM сервиса
+systemctl enable sddm
+
+echo "=== SDDM configuration completed ==="
