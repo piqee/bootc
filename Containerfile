@@ -11,8 +11,8 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx,rw \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
-    /ctx/build.sh && \
     chmod +x /ctx/*.sh && \
+    /ctx/build.sh && \
     /ctx/theme.sh && \
     /ctx/sddm.sh && \
     /ctx/river.sh && \
