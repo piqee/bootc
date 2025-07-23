@@ -140,7 +140,7 @@ cat > /etc/skel/.config/waybar/config.jsonc << 'EOF'                            
 }
 EOF
 
-cat > /etc/skel/.config/waybar/style.css << 'EOF'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          style.css                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+cat > /etc/skel/.config/waybar/style.css << 'EOF'
 * {
     font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
     font-size: 13px;
