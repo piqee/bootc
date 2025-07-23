@@ -2,6 +2,7 @@
 set -e
 
 mkdir -p /etc/skel/.config/waybar/
+touch /etc/skel/.config/waybar/config.jsonc
 
 cat > /etc/skel/.config/waybar/config.jsonc << 'EOF'                                                                                                                                                                                                                                                                                                                                                                                                                  config.jsonc                                                                                                                                                                                                                                                                                                                                                                                                                               
 // -*- mode: jsonc -*-
