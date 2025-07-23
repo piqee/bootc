@@ -24,3 +24,5 @@ cat > /etc/skel/.config/river/init << 'EOF'                                     
 
 EOF
 
+cat > /etc/skel/.config/river/init << 'EOF'
+EOF
