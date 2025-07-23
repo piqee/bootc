@@ -12,12 +12,11 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx,rw \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh && \
-    chmod +x /ctx/sddm.sh && \
-    chmod +x /ctx/river.sh && \
-    chmod +x /ctx/settings.sh && \
-    /ctx/settings.sh && \
+    chmod +x /ctx/*.sh && \
+    /ctx/theme.sh && \
     /ctx/sddm.sh && \
     /ctx/river.sh && \
+    /ctx.waybar.sh && \
     ostree container commit
 
 RUN bootc container lint
