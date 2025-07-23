@@ -2,9 +2,6 @@
 
 set -ouex pipefail
 
-mkdir -p /root/.gnupg
-chmod 700 /root/.gnupg
-
 dnf5 install -y --skip-unavailable tmux btop fastfetch fuzzel foot thunar gnome-software lxappearance swaybg 
 dnf5 install -y --skip-unavailable \
     river \
