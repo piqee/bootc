@@ -4,6 +4,7 @@ set -ouex pipefail
 
 dnf5 install -y --skip-unavailable tmux btop fastfetch fuzzel foot thunar gnome-software lxappearance swaybg 
 dnf5 install -y --skip-unavailable \
+    wlr-randr \
     river \
     waybar \
     wlroots \
