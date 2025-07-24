@@ -17,8 +17,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx,rw \
     /ctx/theme.sh && \
     /ctx/sddm.sh && \
     /ctx/river.sh && \
-
-#    /ctx/waybar.sh && \
+    /ctx/waybar.sh && \
     ostree container commit
 
 RUN bootc container lint
