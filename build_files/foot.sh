@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-mkdir etc/skel/.config/foot/
+mkdir /etc/skel/.config/foot/
 
-cat > etc/skel/.config/foot/foot.ini << 'EOF'
+cat > /etc/skel/.config/foot/foot.ini << 'EOF'
 # -*- conf -*-
 
 
