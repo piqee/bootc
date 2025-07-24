@@ -27,8 +27,12 @@ dnf5 install -y --skip-unavailable \
     qt6ct
 
 dnf5 -y copr enable atim/starship
+dnf5 -y copr enable scottames/ghostty
+
 dnf5 -y install starship
+dnf5 -y install ghostty
 
 dnf5 -y copr disable atim/starship
+dnf5 -y copr disable scottames/ghostty
 
 systemctl enable podman.socket
