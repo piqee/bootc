@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "===START the waybar.sh==="
+
 mkdir -p /etc/skel/.config/waybar/
 
 cat > /etc/skel/.config/waybar/config << 'EOF'                                                                                                                                                                                                                                                                                                                                                                                                                  config.jsonc                                                                                                                                                                                                                                                                                                                                                                                                                               
@@ -428,3 +430,6 @@ window#waybar.bottom #mode {
     color: #97e1ad;
 }
 EOF
+
+echo "===the waybar.sh COMPLETED==="
+
