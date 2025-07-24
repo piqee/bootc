@@ -12,8 +12,8 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx,rw \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     chmod +x /ctx/*.sh && \
-    /ctx/waybar.sh && \
-    /ctx/foot.sh && \
+    #/ctx/waybar.sh && \
+    #/ctx/foot.sh && \
     /ctx/build.sh && \
     /ctx/theme.sh && \
     /ctx/sddm.sh && \
