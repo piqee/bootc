@@ -29,7 +29,8 @@ dnf5 install -y --skip-unavailable \
     wireplumber \
     pipewire \
     pamixer \
-    pulseaudio-utils 
+    pulseaudio-utils \
+    qemu-system-x86
 
 dnf5 -y copr enable atim/starship
 dnf5 -y copr enable scottames/ghostty
