@@ -24,7 +24,12 @@ dnf5 install -y --skip-unavailable \
     adwaita-qt6 \
     qt5-qtconfiguration \
     qt5ct \
-    qt6ct
+    qt6ct \
+    # sound
+    wireplumber \
+    pipewire \
+    pamixer \
+    pulseaudio-utils 
 
 dnf5 -y copr enable atim/starship
 dnf5 -y copr enable scottames/ghostty
